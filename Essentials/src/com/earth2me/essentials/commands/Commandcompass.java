@@ -7,7 +7,6 @@ import org.bukkit.Server;
 
 public class Commandcompass extends EssentialsCommand
 {
-
 	public Commandcompass()
 	{
 		super("compass");

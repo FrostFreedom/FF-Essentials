@@ -7,7 +7,6 @@ import org.bukkit.Server;
 
 public class Commandtpa extends EssentialsCommand
 {
-
 	public Commandtpa()
 	{
 		super("tpa");

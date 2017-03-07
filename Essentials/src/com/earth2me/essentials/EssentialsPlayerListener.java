@@ -25,6 +25,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.*;
+import org.bukkit.event.player.PlayerLoginEvent.Result;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
@@ -33,7 +34,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class EssentialsPlayerListener implements Listener
 {
-
 	private static final Logger LOGGER = Logger.getLogger("Essentials");
 	private final transient IEssentials ess;
 
@@ -222,6 +222,7 @@ public class EssentialsPlayerListener implements Listener
 		ess.getBackup().onPlayerJoin();
 		final User dUser = ess.getUser(player);
 
+
 		if (dUser.isNPC())
 		{
 			dUser.setNPC(false);
@@ -256,7 +257,6 @@ public class EssentialsPlayerListener implements Listener
 
 		class DelayJoinTask implements Runnable
 		{
-
 			@Override
 			public void run()
 			{
@@ -450,7 +450,7 @@ public class EssentialsPlayerListener implements Listener
 	{
 		final User user = ess.getUser(event.getPlayer());
 		if ((user.getBase().getGameMode() != GameMode.CREATIVE && user.getBase().getGameMode() != GameMode.SPECTATOR)
-			&& !user.isAuthorized("essentials.fly"))
+				&& !user.isAuthorized("essentials.fly"))
 		{
 			user.getBase().setFallDistance(0f);
 			user.getBase().setAllowFlight(false);
@@ -555,7 +555,6 @@ public class EssentialsPlayerListener implements Listener
 
 			class DelayedClickJumpTask implements Runnable
 			{
-
 				@Override
 				public void run()
 				{
@@ -606,7 +605,6 @@ public class EssentialsPlayerListener implements Listener
 
 				class PowerToolUseTask implements Runnable
 				{
-
 					@Override
 					public void run()
 					{

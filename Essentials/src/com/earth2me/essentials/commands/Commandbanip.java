@@ -10,11 +10,10 @@ import org.bukkit.BanList;
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
 
-//TODO: Add kick to online players matching ip ban.
 
+//TODO: Add kick to online players matching ip ban.
 public class Commandbanip extends EssentialsCommand
 {
-
 	public Commandbanip()
 	{
 		super("banip");

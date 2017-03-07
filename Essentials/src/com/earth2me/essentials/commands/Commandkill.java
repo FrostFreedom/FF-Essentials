@@ -10,7 +10,6 @@ import org.bukkit.event.entity.EntityDamageEvent;
 
 public class Commandkill extends EssentialsLoopCommand
 {
-
 	public Commandkill()
 	{
 		super("kill");

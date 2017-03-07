@@ -13,7 +13,6 @@ import org.bukkit.Server;
 
 public class Commandunbanip extends EssentialsCommand
 {
-
 	public Commandunbanip()
 	{
 		super("unbanip");
@@ -49,6 +48,7 @@ public class Commandunbanip extends EssentialsCommand
 		{
 			throw new PlayerNotFoundException();
 		}
+
 
 		ess.getServer().getBanList(BanList.Type.IP).pardon(ipAddress);
 		final String senderName = sender.isPlayer() ? sender.getPlayer().getDisplayName() : Console.NAME;

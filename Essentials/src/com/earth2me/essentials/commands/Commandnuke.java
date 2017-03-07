@@ -13,7 +13,6 @@ import org.bukkit.entity.TNTPrimed;
 
 public class Commandnuke extends EssentialsCommand
 {
-
 	public Commandnuke()
 	{
 		super("nuke");

@@ -13,7 +13,6 @@ import org.bukkit.Location;
 @EqualsAndHashCode(callSuper = false)
 public class Jails implements StorageObject
 {
-
 	@MapValueType(Location.class)
 	private Map<String, Location> jails = new HashMap<String, Location>();
 }

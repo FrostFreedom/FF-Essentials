@@ -8,7 +8,6 @@ import org.bukkit.Server;
 
 public class Commandtptoggle extends EssentialsToggleCommand
 {
-
 	public Commandtptoggle()
 	{
 		super("tptoggle", "essentials.tptoggle.others");

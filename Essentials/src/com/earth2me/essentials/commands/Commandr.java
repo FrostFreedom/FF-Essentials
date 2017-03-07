@@ -11,7 +11,6 @@ import org.bukkit.Server;
 
 public class Commandr extends EssentialsCommand
 {
-
 	public Commandr()
 	{
 		super("r");

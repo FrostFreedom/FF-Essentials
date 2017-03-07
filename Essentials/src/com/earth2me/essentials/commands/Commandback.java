@@ -8,7 +8,6 @@ import org.bukkit.Server;
 
 public class Commandback extends EssentialsCommand
 {
-
 	public Commandback()
 	{
 		super("back");

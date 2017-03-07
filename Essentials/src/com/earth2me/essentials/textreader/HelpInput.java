@@ -13,7 +13,6 @@ import org.bukkit.plugin.PluginDescriptionFile;
 
 public class HelpInput implements IText
 {
-
 	private static final String DESCRIPTION = "description";
 	private static final String PERMISSION = "permission";
 	private static final String PERMISSIONS = "permissions";

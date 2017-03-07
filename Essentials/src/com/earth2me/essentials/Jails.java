@@ -31,7 +31,6 @@ import org.bukkit.plugin.PluginManager;
 
 public class Jails extends AsyncStorageObjectHolder<com.earth2me.essentials.settings.Jails> implements net.ess3.api.IJails
 {
-
 	private static final transient Logger LOGGER = Bukkit.getLogger();
 	private static transient boolean enabled = false;
 
@@ -198,7 +197,6 @@ public class Jails extends AsyncStorageObjectHolder<com.earth2me.essentials.sett
 
 	private class JailListener implements Listener
 	{
-
 		@EventHandler(priority = EventPriority.LOW, ignoreCancelled = true)
 		public void onJailBlockBreak(final BlockBreakEvent event)
 		{

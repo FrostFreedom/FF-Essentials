@@ -11,7 +11,6 @@ import org.bukkit.event.block.BlockBreakEvent;
 
 public class Commandbreak extends EssentialsCommand
 {
-
 	public Commandbreak()
 	{
 		super("break");
@@ -21,7 +20,7 @@ public class Commandbreak extends EssentialsCommand
 	@Override
 	public void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{
-		final Block block = user.getBase().getTargetBlock((Set<Material>)null, 20);
+		final Block block = user.getBase().getTargetBlock((Set) null, 20);
 		if (block == null)
 		{
 			throw new NoChargeException();
@@ -34,7 +33,7 @@ public class Commandbreak extends EssentialsCommand
 		{
 			throw new Exception(tl("noBreakBedrock"));
 		}
-		//final List<ItemStack> list = (List<ItemStack>)block.getDrops();
+		//final List<ItemStack> list = (List<ItemStack>)block.getDrops();		
 		//final BlockBreakEvent event = new BlockBreakEvent(block, user.getBase(), list);
 		final BlockBreakEvent event = new BlockBreakEvent(block, user.getBase());
 		server.getPluginManager().callEvent(event);

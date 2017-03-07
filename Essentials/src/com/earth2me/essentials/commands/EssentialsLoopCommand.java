@@ -14,7 +14,6 @@ import org.bukkit.entity.Player;
 
 public abstract class EssentialsLoopCommand extends EssentialsCommand
 {
-
 	public EssentialsLoopCommand(String command)
 	{
 		super(command);

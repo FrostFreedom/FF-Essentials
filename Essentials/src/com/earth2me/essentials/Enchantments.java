@@ -11,7 +11,6 @@ import org.bukkit.enchantments.Enchantment;
 
 public class Enchantments
 {
-
 	private static final Map<String, Enchantment> ENCHANTMENTS = new HashMap<String, Enchantment>();
 	private static final Map<String, Enchantment> ALIASENCHANTMENTS = new HashMap<String, Enchantment>();
 
@@ -150,6 +149,26 @@ public class Enchantments
 
 		ENCHANTMENTS.put("lure", Enchantment.LURE);
 		ALIASENCHANTMENTS.put("rodlure", Enchantment.LURE);
+
+		ENCHANTMENTS.put("depthstrider", Enchantment.DEPTH_STRIDER);
+		ALIASENCHANTMENTS.put("depth", Enchantment.DEPTH_STRIDER);
+		ALIASENCHANTMENTS.put("strider", Enchantment.DEPTH_STRIDER);
+
+		ENCHANTMENTS.put("frostwalker", Enchantment.FROST_WALKER);
+		ALIASENCHANTMENTS.put("frost", Enchantment.FROST_WALKER);
+		ALIASENCHANTMENTS.put("walker", Enchantment.FROST_WALKER);
+
+		ENCHANTMENTS.put("mending", Enchantment.MENDING);
+
+		ENCHANTMENTS.put("bindingcurse", Enchantment.BINDING_CURSE);
+		ALIASENCHANTMENTS.put("bindcurse", Enchantment.BINDING_CURSE);
+		ALIASENCHANTMENTS.put("binding", Enchantment.BINDING_CURSE);
+		ALIASENCHANTMENTS.put("bind", Enchantment.BINDING_CURSE);
+
+		ENCHANTMENTS.put("vanishingcurse", Enchantment.VANISHING_CURSE);
+		ALIASENCHANTMENTS.put("vanishcurse", Enchantment.VANISHING_CURSE);
+		ALIASENCHANTMENTS.put("vanishing", Enchantment.VANISHING_CURSE);
+		ALIASENCHANTMENTS.put("vanish", Enchantment.VANISHING_CURSE);
 	}
 
 	public static Enchantment getByName(String name)

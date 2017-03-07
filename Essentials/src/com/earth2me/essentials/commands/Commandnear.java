@@ -11,7 +11,6 @@ import org.bukkit.entity.Player;
 
 public class Commandnear extends EssentialsCommand
 {
-
 	public Commandnear()
 	{
 		super("near");
@@ -21,14 +20,14 @@ public class Commandnear extends EssentialsCommand
 	protected void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{
 		long maxRadius = ess.getSettings().getChatRadius();
-
+		
 		if (maxRadius == 0)
 		{
 			maxRadius = 200;
 		}
-
+		
 		long radius = maxRadius;
-
+		
 		User otherUser = null;
 
 		if (args.length > 0)
@@ -58,15 +57,15 @@ public class Commandnear extends EssentialsCommand
 				}
 			}
 		}
-
+		
 		radius = Math.abs(radius);
-
+		
 		if (radius > maxRadius && !user.isAuthorized("essentials.near.maxexempt"))
 		{
 			user.sendMessage(tl("radiusTooBig", maxRadius));
 			radius = maxRadius;
 		}
-
+		
 		if (otherUser == null || !user.isAuthorized("essentials.near.others"))
 		{
 			otherUser = user;
@@ -104,7 +103,7 @@ public class Commandnear extends EssentialsCommand
 		final long radiusSquared = radius * radius;
 		boolean showHidden = user.canInteractVanished();
 
-		for (User player : ess.getOnlineUsers())
+		for (User player: ess.getOnlineUsers())
 		{
 			if (!player.equals(user) && (!player.isHidden(user.getBase()) || showHidden || user.getBase().canSee(player.getBase())))
 			{

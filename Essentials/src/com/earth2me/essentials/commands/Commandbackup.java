@@ -8,7 +8,6 @@ import org.bukkit.Server;
 
 public class Commandbackup extends EssentialsCommand
 {
-
 	public Commandbackup()
 	{
 		super("backup");

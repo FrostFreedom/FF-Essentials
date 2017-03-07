@@ -7,7 +7,6 @@ import org.bukkit.entity.Player;
 
 public class NullPermissionsHandler implements IPermissionsHandler
 {
-
 	@Override
 	public String getGroup(final Player base)
 	{

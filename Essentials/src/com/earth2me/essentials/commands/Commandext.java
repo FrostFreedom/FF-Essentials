@@ -9,7 +9,6 @@ import org.bukkit.entity.Player;
 
 public class Commandext extends EssentialsLoopCommand
 {
-
 	public Commandext()
 	{
 		super("ext");

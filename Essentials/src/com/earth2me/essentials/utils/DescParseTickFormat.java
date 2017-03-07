@@ -18,7 +18,6 @@ public final class DescParseTickFormat
 	// ============================================
 	// First some information vars. TODO: Should this be in a config file?
 	// --------------------------------------------
-
 	public static final Map<String, Integer> nameToTicks = new LinkedHashMap<String, Integer>();
 	public static final Set<String> resetAliases = new HashSet<String>();
 	public static final int ticksAtMidnight = 18000;
@@ -107,7 +106,6 @@ public final class DescParseTickFormat
 		// Well we failed to understand...
 		throw new NumberFormatException();
 	}
-
 	public static long parseTicks(String desc) throws NumberFormatException
 	{
 		if (!desc.matches("^[0-9]+ti?c?k?s?$"))
@@ -226,7 +224,6 @@ public final class DescParseTickFormat
 	{
 		return tl("timeFormat", format24(ticks), format12(ticks), formatTicks(ticks));
 	}
-
 	public static String formatTicks(final long ticks)
 	{
 		return (ticks % ticksPerDay) + "ticks";

@@ -15,7 +15,6 @@ import org.bukkit.entity.Player;
 
 public abstract class EssentialsCommand implements IEssentialsCommand
 {
-
 	private final transient String name;
 	protected transient IEssentials ess;
 	protected transient IEssentialsModule module;

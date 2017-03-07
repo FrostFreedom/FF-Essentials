@@ -7,7 +7,6 @@ import org.bukkit.Server;
 
 public class Commanddepth extends EssentialsCommand
 {
-
 	public Commanddepth()
 	{
 		super("depth");

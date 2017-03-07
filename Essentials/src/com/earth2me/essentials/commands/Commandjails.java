@@ -7,7 +7,6 @@ import org.bukkit.Server;
 
 public class Commandjails extends EssentialsCommand
 {
-
 	public Commandjails()
 	{
 		super("jails");

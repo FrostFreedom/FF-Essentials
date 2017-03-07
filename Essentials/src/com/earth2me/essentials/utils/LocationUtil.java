@@ -20,7 +20,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class LocationUtil
 {
-
 	// The player can stand inside these materials
 	public static final Set<Integer> HOLLOW_MATERIALS = new HashSet<Integer>();
 	private static final HashSet<Byte> TRANSPARENT_MATERIALS = new HashSet<Byte>();
@@ -159,7 +158,6 @@ public class LocationUtil
 
 	public static class Vector3D
 	{
-
 		public int x;
 		public int y;
 		public int z;
@@ -187,13 +185,13 @@ public class LocationUtil
 		}
 		Collections.sort(
 				pos, new Comparator<Vector3D>()
-				{
-					@Override
-					public int compare(Vector3D a, Vector3D b)
-					{
-						return (a.x * a.x + a.y * a.y + a.z * a.z) - (b.x * b.x + b.y * b.y + b.z * b.z);
-					}
-				});
+		{
+			@Override
+			public int compare(Vector3D a, Vector3D b)
+			{
+				return (a.x * a.x + a.y * a.y + a.z * a.z) - (b.x * b.x + b.y * b.y + b.z * b.z);
+			}
+		});
 		VOLUME = pos.toArray(new Vector3D[0]);
 	}
 

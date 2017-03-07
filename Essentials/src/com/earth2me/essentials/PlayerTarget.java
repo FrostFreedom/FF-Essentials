@@ -7,7 +7,6 @@ import org.bukkit.entity.Player;
 
 public class PlayerTarget implements ITarget
 {
-
 	private final String name;
 
 	public PlayerTarget(Player entity)

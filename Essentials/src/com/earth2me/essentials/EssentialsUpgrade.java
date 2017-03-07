@@ -23,7 +23,6 @@ import org.bukkit.World;
 
 public class EssentialsUpgrade
 {
-
 	private final static Logger LOGGER = Logger.getLogger("Essentials");
 	private final transient IEssentials ess;
 	private final transient EssentialsConf doneFile;
@@ -187,7 +186,7 @@ public class EssentialsUpgrade
 			}
 			catch (RuntimeException ex)
 			{
-				LOGGER.log(Level.INFO, "File: " + file.toString());
+				LOGGER.log(Level.INFO, "File: {0}", file.toString());
 				throw ex;
 			}
 		}
@@ -261,7 +260,7 @@ public class EssentialsUpgrade
 			}
 			catch (RuntimeException ex)
 			{
-				LOGGER.log(Level.INFO, "File: " + file.toString());
+				LOGGER.log(Level.INFO, "File: {0}", file.toString());
 				throw ex;
 			}
 		}
@@ -579,7 +578,7 @@ public class EssentialsUpgrade
 		int countEssCache = 0;
 		int countBukkit = 0;
 
-		ess.getLogger().info("Found " + userdir.list().length + " files to convert...");
+		ess.getLogger().log(Level.INFO, "Found {0} files to convert...", userdir.list().length);
 
 		for (String string : userdir.list())
 		{
@@ -593,7 +592,7 @@ public class EssentialsUpgrade
 			if (showProgress == 0)
 			{
 				ess.getUserMap().getUUIDMap().forceWriteUUIDMap();
-				ess.getLogger().info("Converted " + countFiles + "/" + userdir.list().length);
+				ess.getLogger().log(Level.INFO, "Converted {0}/{1}", new Object[]{countFiles, userdir.list().length});
 			}
 
 			countFiles++;
@@ -657,8 +656,8 @@ public class EssentialsUpgrade
 		}
 		ess.getUserMap().getUUIDMap().forceWriteUUIDMap();
 
-		ess.getLogger().info("Converted " + countFiles + "/" + countFiles + ".  Conversion complete.");
-		ess.getLogger().info("Converted via cache: " + countEssCache + " :: Converted via lookup: " + countBukkit + " :: Failed to convert: " + countFails);
+		ess.getLogger().log(Level.INFO, "Converted {0}/{1}.  Conversion complete.", new Object[]{countFiles, countFiles});
+		ess.getLogger().log(Level.INFO, "Converted via cache: {0} :: Converted via lookup: {1} :: Failed to convert: {2}", new Object[]{countEssCache, countBukkit, countFails});
 		ess.getLogger().info("To rerun the conversion type /essentials uuidconvert");
 	}
 
@@ -679,7 +678,7 @@ public class EssentialsUpgrade
 
 		int countFiles = 0;
 
-		ess.getLogger().info("Found " + userdir.list().length + " files to convert...");
+		ess.getLogger().log(Level.INFO, "Found {0} files to convert...", userdir.list().length);
 
 		for (String string : userdir.list())
 		{
@@ -692,14 +691,14 @@ public class EssentialsUpgrade
 
 			if (showProgress == 0)
 			{
-				ess.getLogger().info("Converted " + countFiles + "/" + userdir.list().length);
+				ess.getLogger().log(Level.INFO, "Converted {0}/{1}", new Object[]{countFiles, userdir.list().length});
 			}
 
 			countFiles++;
 			final File pFile = new File(userdir, string);
 			final EssentialsConf conf = new EssentialsConf(pFile);
 			conf.load();
-
+			
 			String banReason;
 			Long banTimeout;
 
@@ -730,7 +729,7 @@ public class EssentialsUpgrade
 				{
 					banTimeout = 0L;
 				}
-
+				
 				if (BanLookup.isBanned(ess, playerName))
 				{
 					updateBan(playerName, banReason, banTimeout);

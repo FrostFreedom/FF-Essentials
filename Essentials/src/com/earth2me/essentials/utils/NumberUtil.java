@@ -11,7 +11,6 @@ import net.ess3.api.IEssentials;
 
 public class NumberUtil
 {
-
 	static DecimalFormat twoDPlaces = new DecimalFormat("#,###.##");
 	static DecimalFormat currencyFormat = new DecimalFormat("#0.00", DecimalFormatSymbols.getInstance(Locale.US));
 

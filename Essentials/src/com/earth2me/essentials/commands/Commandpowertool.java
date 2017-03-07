@@ -14,7 +14,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class Commandpowertool extends EssentialsCommand
 {
-
 	public Commandpowertool()
 	{
 		super("powertool");

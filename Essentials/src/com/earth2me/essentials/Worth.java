@@ -13,7 +13,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class Worth implements IConf
 {
-
 	private final EssentialsConf config;
 
 	public Worth(File dataFolder)

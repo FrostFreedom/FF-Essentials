@@ -23,7 +23,6 @@ import org.yaml.snakeyaml.nodes.*;
 
 public class BukkitConstructor extends CustomClassLoaderConstructor
 {
-
 	private final transient Plugin plugin;
 
 	public BukkitConstructor(final Class clazz, final Plugin plugin)
@@ -37,7 +36,6 @@ public class BukkitConstructor extends CustomClassLoaderConstructor
 
 	private class ConstructBukkitScalar extends ConstructScalar
 	{
-
 		@Override
 		public Object construct(final Node node)
 		{
@@ -220,7 +218,6 @@ public class BukkitConstructor extends CustomClassLoaderConstructor
 
 	private class ConstructBukkitMapping extends ConstructMapping
 	{
-
 		@Override
 		public Object construct(final Node node)
 		{

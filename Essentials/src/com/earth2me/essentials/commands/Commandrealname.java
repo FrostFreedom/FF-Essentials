@@ -11,7 +11,6 @@ import org.bukkit.entity.Player;
 
 public class Commandrealname extends EssentialsCommand
 {
-
 	public Commandrealname()
 	{
 		super("realname");
@@ -27,7 +26,7 @@ public class Commandrealname extends EssentialsCommand
 		final String whois = args[0].toLowerCase(Locale.ENGLISH);
 		boolean skipHidden = sender.isPlayer() && !ess.getUser(sender.getPlayer()).canInteractVanished();
 		boolean foundUser = false;
-		for (User u : ess.getOnlineUsers())
+		for (User u: ess.getOnlineUsers())
 		{
 			if (skipHidden && u.isHidden(sender.getPlayer()) && !sender.getPlayer().canSee(u.getBase()))
 			{

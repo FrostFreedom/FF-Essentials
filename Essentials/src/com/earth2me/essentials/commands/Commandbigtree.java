@@ -10,7 +10,6 @@ import org.bukkit.TreeType;
 
 public class Commandbigtree extends EssentialsCommand
 {
-
 	public Commandbigtree()
 	{
 		super("bigtree");

@@ -3,7 +3,6 @@ package com.earth2me.essentials.metrics;
 import com.earth2me.essentials.metrics.Metrics.Graph;
 import com.earth2me.essentials.metrics.Metrics.Plotter;
 import com.earth2me.essentials.register.payment.Method;
-import com.earth2me.essentials.register.payment.methods.VaultEco;
 import com.earth2me.essentials.signs.EssentialsSign;
 import java.util.Locale;
 import java.util.logging.Level;
@@ -13,14 +12,12 @@ import org.bukkit.configuration.ConfigurationSection;
 
 public class MetricsStarter implements Runnable
 {
-
 	private final IEssentials ess;
 	private transient Boolean start;
 
 
 	private enum Modules
 	{
-
 		Essentials,
 		EssentialsAntiBuild,
 		EssentialsAntiCheat,
@@ -178,18 +175,11 @@ public class MetricsStarter implements Runnable
 			if (method != null)
 			{
 				String version;
-				if (method instanceof VaultEco)
+				version = method.getVersion();
+				final int dashPosition = version.indexOf('-');
+				if (dashPosition > 0)
 				{
-					version = ((VaultEco)method).getEconomy();
-				}
-				else
-				{
-					version = method.getVersion();
-					final int dashPosition = version.indexOf('-');
-					if (dashPosition > 0)
-					{
-						version = version.substring(0, dashPosition);
-					}
+					version = version.substring(0, dashPosition);
 				}
 				depGraph.addPlotter(new SimplePlotter(method.getName() + " " + version));
 			}
@@ -218,7 +208,7 @@ public class MetricsStarter implements Runnable
 		}
 		else
 		{
-			ess.getLogger().log(Level.INFO, "[Metrics] " + ex.getMessage());
+			ess.getLogger().log(Level.INFO, "[Metrics] {0}", ex.getMessage());
 		}
 	}
 
@@ -230,7 +220,6 @@ public class MetricsStarter implements Runnable
 
 	private class SimplePlotter extends Plotter
 	{
-
 		public SimplePlotter(final String name)
 		{
 			super(name);

@@ -10,7 +10,6 @@ import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
 public class Commandtpaccept extends EssentialsCommand
 {
-
 	public Commandtpaccept()
 	{
 		super("tpaccept");

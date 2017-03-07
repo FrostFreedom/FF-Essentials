@@ -9,7 +9,6 @@ import org.bukkit.Server;
 
 public class Commanddelhome extends EssentialsCommand
 {
-
 	public Commanddelhome()
 	{
 		super("delhome");

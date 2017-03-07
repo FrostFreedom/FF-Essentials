@@ -12,7 +12,6 @@ import org.bukkit.plugin.Plugin;
  */
 public interface Method
 {
-
 	/**
 	 * Encodes the Plugin into an Object disguised as the Plugin. If you want the original Plugin Class you must cast it
 	 * to the correct Plugin, to do so you have to verify the name and or version then cast.
@@ -21,7 +20,8 @@ public interface Method
 	 *  if(method.getName().equalsIgnoreCase("iConomy"))
 	 *   iConomy plugin = ((iConomy)method.getPlugin());</pre>
 	 *
-	 * @return <code>Object</code>
+	 * @return
+	 * <code>Object</code>
 	 * @see #getName()
 	 * @see #getVersion()
 	 */
@@ -33,7 +33,7 @@ public interface Method
 	 * @return <code>String</code> Plugin name.
 	 */
 	public String getName();
-
+	
 	/**
 	 * Returns the reported name of this method.
 	 *
@@ -49,8 +49,9 @@ public interface Method
 	public String getVersion();
 
 	/**
-	 * Returns the amount of decimal places that get stored NOTE: it will return -1 if there is no rounding
-	 *
+	 * Returns the amount of decimal places that get stored
+	 * NOTE: it will return -1 if there is no rounding
+	 * 
 	 * @return <code>int</code> for each decimal place
 	 */
 	public int fractionalDigits();
@@ -131,7 +132,8 @@ public interface Method
 	public MethodBankAccount getBankAccount(String bank, String name);
 
 	/**
-	 * Checks to verify the compatibility between this Method and a plugin. Internal usage only, for the most part.
+	 * Checks to verify the compatibility between this Method and a plugin.
+	 * Internal usage only, for the most part.
 	 *
 	 * @param plugin Plugin
 	 * @return <code>boolean</code>
@@ -151,7 +153,6 @@ public interface Method
 	 */
 	public interface MethodAccount
 	{
-
 		public double balance();
 
 		public boolean set(double amount);
@@ -184,7 +185,6 @@ public interface Method
 	 */
 	public interface MethodBankAccount
 	{
-
 		public double balance();
 
 		public String getBankName();

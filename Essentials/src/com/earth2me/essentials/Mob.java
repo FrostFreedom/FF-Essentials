@@ -10,12 +10,11 @@ import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 
+
 // Suffixes can be appended on the end of a mob name to make it plural
 // Entities without a suffix, will default to 's'
-
 public enum Mob
 {
-
 	CHICKEN("Chicken", Enemies.FRIENDLY, EntityType.CHICKEN),
 	COW("Cow", Enemies.FRIENDLY, EntityType.COW),
 	CREEPER("Creeper", Enemies.ENEMY, EntityType.CREEPER),
@@ -57,7 +56,22 @@ public enum Mob
 	RABBIT("Rabbit", Enemies.FRIENDLY, EntityType.RABBIT),
 	ENDERMITE("Endermite", Enemies.ENEMY, EntityType.ENDERMITE),
 	GUARDIAN("Guardian", Enemies.ENEMY, EntityType.GUARDIAN),
-	ARMOR_STAND("ArmorStand", Enemies.NEUTRAL, EntityType.ARMOR_STAND);
+	ARMOR_STAND("ArmorStand", Enemies.NEUTRAL, EntityType.ARMOR_STAND),
+	ELDER_GUARDIAN("ElderGuardian", Enemies.ENEMY, EntityType.ELDER_GUARDIAN),
+	SHULKER("Shulker", Enemies.ENEMY, EntityType.SHULKER),
+	POLAR_BEAR("PolarBear", Enemies.NEUTRAL, EntityType.POLAR_BEAR),
+	WITHER_SKELETON("WitherSkeleton", Enemies.ENEMY, EntityType.WITHER_SKELETON),
+	STRAY_SKELETON("StraySkeleton", Enemies.ENEMY, EntityType.STRAY),
+	ZOMBIE_VILLAGER("ZombieVillager", Enemies.FRIENDLY, EntityType.ZOMBIE_VILLAGER),
+	SKELETON_HORSE("SkeletonHorse", Enemies.FRIENDLY, EntityType.SKELETON_HORSE),
+	ZOMBIE_HORSE("ZombieHorse", Enemies.FRIENDLY, EntityType.ZOMBIE_HORSE),
+	DONKEY("Donkey", Enemies.FRIENDLY, EntityType.DONKEY),
+	MULE("Mule", Enemies.FRIENDLY, EntityType.MULE),
+	EVOKER("Evoker", Enemies.ENEMY, EntityType.EVOKER),
+	VEX("Vex", Enemies.ENEMY, EntityType.VEX),
+	VINDICATOR("Vindicator", Enemies.ENEMY, EntityType.VINDICATOR),
+	LLAMA("Llama", Enemies.NEUTRAL, EntityType.LLAMA),
+	HUSK("Husk", Enemies.ENEMY, EntityType.HUSK);
 	public static final Logger logger = Logger.getLogger("Essentials");
 
 	private Mob(String n, Enemies en, String s, EntityType type)
@@ -109,7 +123,6 @@ public enum Mob
 
 	public enum Enemies
 	{
-
 		FRIENDLY("friendly"),
 		NEUTRAL("neutral"),
 		ENEMY("enemy");
@@ -139,7 +152,6 @@ public enum Mob
 
 	public static class MobException extends Exception
 	{
-
 		private static final long serialVersionUID = 1L;
 	}
 }

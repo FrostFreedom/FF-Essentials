@@ -10,7 +10,6 @@ import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
 public class SignWarp extends EssentialsSign
 {
-
 	public SignWarp()
 	{
 		super("Warp");

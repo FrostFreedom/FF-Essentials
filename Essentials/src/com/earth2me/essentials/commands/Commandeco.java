@@ -13,7 +13,6 @@ import org.bukkit.Server;
 
 public class Commandeco extends EssentialsLoopCommand
 {
-
 	Commandeco.EcoCommands cmd;
 	BigDecimal amount;
 
@@ -120,7 +119,6 @@ public class Commandeco extends EssentialsLoopCommand
 
 	private enum EcoCommands
 	{
-
 		GIVE, TAKE, SET, RESET
 	}
 }

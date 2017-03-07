@@ -6,7 +6,6 @@ import net.ess3.api.IUser;
 
 public class FormatUtil
 {
-
 	//Vanilla patterns used to strip existing formats
 	static final transient Pattern VANILLA_PATTERN = Pattern.compile("\u00a7+[0-9A-FK-ORa-fk-or]?");
 	static final transient Pattern VANILLA_COLOR_PATTERN = Pattern.compile("\u00a7+[0-9A-Fa-f]");

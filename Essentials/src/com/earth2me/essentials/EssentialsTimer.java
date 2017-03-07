@@ -12,7 +12,6 @@ import org.bukkit.entity.Player;
 
 public class EssentialsTimer implements Runnable
 {
-
 	private final transient IEssentials ess;
 	private final transient Set<UUID> onlineUsers = new HashSet<UUID>();
 	private transient long lastPoll = System.nanoTime();
@@ -21,13 +20,13 @@ public class EssentialsTimer implements Runnable
 	private int skip2 = 0;
 	private final long maxTime = 10 * 1000000;
 	private final long tickInterval = 50;
-
+	
 	EssentialsTimer(final IEssentials ess)
 	{
 		this.ess = ess;
 		history.add(20d);
 	}
-
+	
 	@Override
 	public void run()
 	{
@@ -77,7 +76,7 @@ public class EssentialsTimer implements Runnable
 				ess.getLogger().log(Level.WARNING, "EssentialsTimer Error:", e);
 			}
 		}
-
+		
 		count = 0;
 		final Iterator<UUID> iterator = onlineUsers.iterator();
 		while (iterator.hasNext())
@@ -99,8 +98,7 @@ public class EssentialsTimer implements Runnable
 			final User user = ess.getUser(iterator.next());
 			if (user.getLastOnlineActivity() < currentTime && user.getLastOnlineActivity() > user.getLastLogout())
 			{
-				if (!user.isHidden())
-				{
+				if (!user.isHidden()) {
 					user.setLastLogout(user.getLastOnlineActivity());
 				}
 				iterator.remove();
@@ -111,7 +109,7 @@ public class EssentialsTimer implements Runnable
 			user.resetInvulnerabilityAfterTeleport();
 		}
 	}
-
+	
 	public double getAverageTPS()
 	{
 		double avg = 0;
@@ -121,7 +119,7 @@ public class EssentialsTimer implements Runnable
 			{
 				avg += f;
 			}
-		}
+		}		
 		return avg / history.size();
 	}
 }

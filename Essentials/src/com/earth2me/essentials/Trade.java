@@ -24,7 +24,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class Trade
 {
-
 	private final transient String command;
 	private final transient Trade fallbackTrade;
 	private final transient BigDecimal money;
@@ -35,7 +34,6 @@ public class Trade
 
 	public enum TradeType
 	{
-
 		MONEY,
 		EXP,
 		ITEM
@@ -44,7 +42,6 @@ public class Trade
 
 	public enum OverflowType
 	{
-
 		ABORT,
 		DROP,
 		RETURN

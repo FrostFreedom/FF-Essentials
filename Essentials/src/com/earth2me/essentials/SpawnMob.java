@@ -21,7 +21,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class SpawnMob
 {
-
 	public static String mobList(final User user)
 	{
 		final Set<String> mobList = Mob.getMobList();
@@ -217,12 +216,12 @@ public class SpawnMob
 		{
 			sender.sendMessage(tl("mobDataList", StringUtil.joinList(MobData.getValidHelp(spawned))));
 		}
-
+		
 		if (spawned instanceof Zombie)
 		{
 			((Zombie)spawned).setBaby(false);
 		}
-		else if (spawned instanceof Ageable)
+		else if(spawned instanceof Ageable)				
 		{
 			((Ageable)spawned).setAdult();
 		}
@@ -297,8 +296,8 @@ public class SpawnMob
 		{
 			final PigZombie zombie = ((PigZombie)spawned);
 			zombie.setVillager(false);
-
-			final EntityEquipment invent = zombie.getEquipment();
+			
+			final EntityEquipment invent = zombie.getEquipment();	
 			invent.setItemInHand(new ItemStack(Material.GOLD_SWORD, 1));
 			invent.setItemInHandDropChance(0.1f);
 
@@ -310,8 +309,8 @@ public class SpawnMob
 		{
 			final Zombie zombie = ((Zombie)spawned);
 			zombie.setVillager(false);
-
-			final EntityEquipment invent = zombie.getEquipment();
+			
+			final EntityEquipment invent = zombie.getEquipment();						
 			invent.setBoots(new ItemStack(Material.GOLD_BOOTS, 1));
 			invent.setBootsDropChance(0.0f);
 		}

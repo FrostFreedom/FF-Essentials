@@ -12,7 +12,6 @@ import org.bukkit.event.entity.EntityExplodeEvent;
 
 public class SignEntityListener implements Listener
 {
-
 	private final transient IEssentials ess;
 
 	public SignEntityListener(final IEssentials ess)
@@ -28,7 +27,7 @@ public class SignEntityListener implements Listener
 			event.getHandlers().unregister(this);
 			return;
 		}
-
+		
 		for (Block block : event.blockList())
 		{
 			if (((block.getType() == Material.WALL_SIGN

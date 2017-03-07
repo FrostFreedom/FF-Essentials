@@ -9,7 +9,6 @@ import org.bukkit.entity.Player;
 
 public abstract class EssentialsToggleCommand extends EssentialsCommand
 {
-
 	String othersPermission;
 
 	public EssentialsToggleCommand(String command, String othersPermission)

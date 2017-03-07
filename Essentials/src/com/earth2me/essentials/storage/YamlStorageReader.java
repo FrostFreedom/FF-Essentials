@@ -12,7 +12,6 @@ import org.yaml.snakeyaml.constructor.Constructor;
 
 public class YamlStorageReader implements IStorageReader
 {
-
 	private transient static final Map<Class, Yaml> PREPARED_YAMLS = Collections.synchronizedMap(new HashMap<Class, Yaml>());
 	private transient static final Map<Class, ReentrantLock> LOCKS = new HashMap<Class, ReentrantLock>();
 	private transient final Reader reader;
@@ -46,8 +45,7 @@ public class YamlStorageReader implements IStorageReader
 		try
 		{
 			T object = (T)yaml.load(reader);
-			if (object == null)
-			{
+			if (object == null) {
 				object = clazz.newInstance();
 			}
 			return object;

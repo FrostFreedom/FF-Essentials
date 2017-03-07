@@ -10,7 +10,6 @@ import net.ess3.api.MaxMoneyException;
 
 public class SignSell extends EssentialsSign
 {
-
 	public SignSell()
 	{
 		super("Sell");

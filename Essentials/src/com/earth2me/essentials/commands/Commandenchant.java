@@ -17,7 +17,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class Commandenchant extends EssentialsCommand
 {
-
 	public Commandenchant()
 	{
 		super("enchant");
@@ -61,12 +60,12 @@ public class Commandenchant extends EssentialsCommand
 		}
 
 		final boolean allowUnsafe = ess.getSettings().allowUnsafeEnchantments() && user.isAuthorized("essentials.enchantments.allowunsafe");
-
+		
 		final MetaItemStack metaStack = new MetaItemStack(stack);
 		final Enchantment enchantment = metaStack.getEnchantment(user, args[0]);
 		metaStack.addEnchantment(user.getSource(), allowUnsafe, enchantment, level);
 		user.getBase().getInventory().setItemInHand(metaStack.getItemStack());
-
+		
 		user.getBase().updateInventory();
 		final String enchantmentName = enchantment.getName().toLowerCase(Locale.ENGLISH);
 		if (level == 0)

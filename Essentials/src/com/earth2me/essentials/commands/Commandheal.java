@@ -12,7 +12,6 @@ import org.bukkit.potion.PotionEffect;
 
 public class Commandheal extends EssentialsLoopCommand
 {
-
 	public Commandheal()
 	{
 		super("heal");

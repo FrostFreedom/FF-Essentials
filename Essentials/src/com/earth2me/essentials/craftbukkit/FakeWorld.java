@@ -12,14 +12,15 @@ import org.bukkit.entity.*;
 import org.bukkit.generator.BlockPopulator;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.material.MaterialData;
 import org.bukkit.metadata.MetadataValue;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.util.Consumer;
 import org.bukkit.util.Vector;
 
 
 public class FakeWorld implements World
 {
-
 	private final String name;
 	private final Environment env;
 
@@ -187,12 +188,6 @@ public class FakeWorld implements World
 
 	@Override
 	public boolean generateTree(Location lctn, TreeType tt, BlockChangeDelegate bcd)
-	{
-		throw new UnsupportedOperationException("Not supported yet.");
-	}
-
-	@Override
-	public LivingEntity spawnCreature(Location lctn, CreatureType ct)
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
@@ -588,12 +583,6 @@ public class FakeWorld implements World
 	}
 
 	@Override
-	public LivingEntity spawnCreature(Location arg0, EntityType arg1)
-	{
-		throw new UnsupportedOperationException("Not supported yet.");
-	}
-
-	@Override
 	public <T> void playEffect(Location lctn, Effect effect, T t)
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
@@ -749,9 +738,117 @@ public class FakeWorld implements World
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
-	public Collection<Entity> getNearbyEntities(Location arg0, double arg1, double arg2, double arg3)
+	@Override
+	public <T extends Arrow> T spawnArrow(Location location, Vector direction, float speed, float spread, Class<T> clazz)
 	{
-		throw new UnsupportedOperationException("Not supported yet.");
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
+	@Override
+	public Collection<Entity> getNearbyEntities(Location location, double x, double y, double z)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void playSound(Location location, String sound, float volume, float pitch)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void playSound(Location location, Sound sound, SoundCategory category, float volume, float pitch)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void playSound(Location location, String sound, SoundCategory category, float volume, float pitch)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle particle, Location location, int count)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle particle, double x, double y, double z, int count)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle particle, Location location, int count, T data)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle particle, double x, double y, double z, int count, T data)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle particle, Location location, int count, double offsetX, double offsetY, double offsetZ)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle particle, double x, double y, double z, int count, double offsetX, double offsetY, double offsetZ)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle particle, Location location, int count, double offsetX, double offsetY, double offsetZ, T data)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle particle, double x, double y, double z, int count, double offsetX, double offsetY, double offsetZ, T data)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle particle, Location location, int count, double offsetX, double offsetY, double offsetZ, double extra)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle particle, double x, double y, double z, int count, double offsetX, double offsetY, double offsetZ, double extra)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle particle, Location location, int count, double offsetX, double offsetY, double offsetZ, double extra, T data)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle particle, double x, double y, double z, int count, double offsetX, double offsetY, double offsetZ, double extra, T data)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public FallingBlock spawnFallingBlock(Location location, MaterialData data) throws IllegalArgumentException
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T extends Entity> T spawn(Location lctn, Class<T> type, Consumer<T> cnsmr) throws IllegalArgumentException
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
 }

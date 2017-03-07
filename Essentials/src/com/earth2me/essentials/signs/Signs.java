@@ -1,10 +1,8 @@
 package com.earth2me.essentials.signs;
 
 //This enum is used when checking to see what signs are enabled
-
 public enum Signs
 {
-
 	BALANCE(new SignBalance()),
 	BUY(new SignBuy()),
 	DISPOSAL(new SignDisposal()),

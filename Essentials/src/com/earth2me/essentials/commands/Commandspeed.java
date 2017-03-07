@@ -6,14 +6,12 @@ import static com.earth2me.essentials.I18n.tl;
 import com.earth2me.essentials.FloatUtil;
 import com.earth2me.essentials.User;
 import java.util.List;
-import me.totalfreedom.essentials.EssentialsHandler;
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
 
 
 public class Commandspeed extends EssentialsCommand
 {
-
 	public Commandspeed()
 	{
 		super("speed");
@@ -41,7 +39,7 @@ public class Commandspeed extends EssentialsCommand
 
 		boolean isFly;
 		float speed;
-		boolean isBypass = user.isAuthorized("essentials.speed.bypass") && EssentialsHandler.isSuperAdmin(user.getBase());
+		boolean isBypass = user.isAuthorized("essentials.speed.bypass");
 		if (args.length == 1)
 		{
 			isFly = flyPermCheck(user, user.getBase().isFlying());

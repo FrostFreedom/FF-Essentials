@@ -11,7 +11,6 @@ import org.bukkit.Server;
 
 public class Commandhelp extends EssentialsCommand
 {
-
 	public Commandhelp()
 	{
 		super("help");

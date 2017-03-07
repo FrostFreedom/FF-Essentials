@@ -6,7 +6,6 @@ import org.bukkit.command.CommandSender;
 
 public final class Console implements IReplyTo
 {
-
 	private static final Console instance = new Console();
 	private CommandSource replyTo;
 	public final static String NAME = "Console";

@@ -10,7 +10,6 @@ import org.bukkit.Bukkit;
 
 public abstract class AbstractDelayedYamlFileWriter implements Runnable
 {
-
 	private final transient File file;
 
 	public AbstractDelayedYamlFileWriter(IEssentials ess, File file)

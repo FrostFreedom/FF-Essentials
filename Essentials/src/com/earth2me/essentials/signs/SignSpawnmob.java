@@ -7,7 +7,6 @@ import net.ess3.api.IEssentials;
 
 public class SignSpawnmob extends EssentialsSign
 {
-
 	public SignSpawnmob()
 	{
 		super("Spawnmob");

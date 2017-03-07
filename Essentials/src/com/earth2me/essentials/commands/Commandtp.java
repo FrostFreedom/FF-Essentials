@@ -12,7 +12,6 @@ import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
 public class Commandtp extends EssentialsCommand
 {
-
 	public Commandtp()
 	{
 		super("tp");

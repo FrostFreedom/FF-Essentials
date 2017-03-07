@@ -9,9 +9,9 @@ import java.util.Locale;
 
 public class ExecuteTimer
 {
-
 	private final transient List<ExecuteRecord> times;
 	private final transient DecimalFormat decimalFormat = new DecimalFormat("#0.000", DecimalFormatSymbols.getInstance(Locale.US));
+
 
 	public ExecuteTimer()
 	{
@@ -49,7 +49,7 @@ public class ExecuteTimer
 			time2 = (Long)pair.getTime();
 			if (time1 > 0)
 			{
-				duration = (time2 - time1) / 1000000.0;
+				duration = (time2 - time1)/1000000.0;
 				output.append(mark).append(": ").append(decimalFormat.format(duration)).append("ms - ");
 			}
 			else
@@ -58,7 +58,7 @@ public class ExecuteTimer
 			}
 			time1 = time2;
 		}
-		duration = (time1 - time0) / 1000000.0;
+		duration = (time1 - time0)/1000000.0;
 		output.append("Total: ").append(decimalFormat.format(duration)).append("ms");
 		times.clear();
 		return output.toString();
@@ -67,7 +67,6 @@ public class ExecuteTimer
 
 	private static class ExecuteRecord
 	{
-
 		private final String mark;
 		private final long time;
 

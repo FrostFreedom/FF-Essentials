@@ -9,7 +9,6 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 
 public interface ITeleport
 {
-
 	/**
 	 * Used to skip teleportPlayer delay when teleporting someone to a location or player.
 	 *

@@ -15,7 +15,6 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 public class SignPlayerListener implements Listener
 {
-
 	private final transient IEssentials ess;
 
 	public SignPlayerListener(final IEssentials ess)
@@ -45,7 +44,7 @@ public class SignPlayerListener implements Listener
 			Block targetBlock = null;
 			try
 			{
-				targetBlock = event.getPlayer().getTargetBlock((Set<Material>)null, 5);
+				targetBlock = event.getPlayer().getTargetBlock((Set) null, 5);
 			}
 			catch (IllegalStateException ex)
 			{

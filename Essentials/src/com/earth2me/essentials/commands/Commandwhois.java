@@ -13,7 +13,6 @@ import org.bukkit.Server;
 
 public class Commandwhois extends EssentialsCommand
 {
-
 	public Commandwhois()
 	{
 		super("whois");

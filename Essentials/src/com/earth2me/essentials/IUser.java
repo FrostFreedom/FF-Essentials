@@ -13,7 +13,6 @@ import org.bukkit.entity.Player;
 
 public interface IUser
 {
-
 	boolean isAuthorized(String node);
 
 	boolean isAuthorized(IEssentialsCommand cmd);
@@ -25,7 +24,7 @@ public interface IUser
 	void giveMoney(BigDecimal value) throws MaxMoneyException;
 
 	void giveMoney(final BigDecimal value, final CommandSource initiator) throws MaxMoneyException;
-
+	
 	void payUser(final User reciever, final BigDecimal value) throws Exception;
 
 	void takeMoney(BigDecimal value);

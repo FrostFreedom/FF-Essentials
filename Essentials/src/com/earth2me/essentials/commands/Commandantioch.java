@@ -7,10 +7,8 @@ import org.bukkit.Server;
 import org.bukkit.entity.TNTPrimed;
 
 // This command has a in theme message that only shows if you supply a parameter #EasterEgg
-
 public class Commandantioch extends EssentialsCommand
 {
-
 	public Commandantioch()
 	{
 		super("antioch");

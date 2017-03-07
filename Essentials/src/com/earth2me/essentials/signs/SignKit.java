@@ -11,7 +11,6 @@ import net.ess3.api.IEssentials;
 
 public class SignKit extends EssentialsSign
 {
-
 	public SignKit()
 	{
 		super("Kit");
@@ -80,12 +79,10 @@ public class SignKit extends EssentialsSign
 		}
 		else
 		{
-			if (group.isEmpty())
-			{
+			if (group.isEmpty()) {
 				throw new SignException(tl("noKitPermission", "essentials.kits." + kitName));
 			}
-			else
-			{
+			else {
 				throw new SignException(tl("noKitGroup", group));
 			}
 		}

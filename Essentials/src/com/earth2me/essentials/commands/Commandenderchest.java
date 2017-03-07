@@ -6,7 +6,6 @@ import org.bukkit.Server;
 
 public class Commandenderchest extends EssentialsCommand
 {
-
 	public Commandenderchest()
 	{
 		super("enderchest");

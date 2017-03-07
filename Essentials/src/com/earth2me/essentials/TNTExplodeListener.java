@@ -10,7 +10,6 @@ import org.bukkit.event.entity.EntityExplodeEvent;
 
 public class TNTExplodeListener implements Listener, Runnable
 {
-
 	private final transient IEssentials ess;
 	private transient boolean enabled = false;
 	private transient int timer = -1;

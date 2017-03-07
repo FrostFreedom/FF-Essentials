@@ -8,7 +8,6 @@ import org.bukkit.Server;
 
 public class Commandfly extends EssentialsToggleCommand
 {
-
 	public Commandfly()
 	{
 		super("fly", "essentials.fly.others");
@@ -55,7 +54,7 @@ public class Commandfly extends EssentialsToggleCommand
 
 		user.getBase().setFallDistance(0f);
 		user.getBase().setAllowFlight(enabled);
-
+		
 		if (!user.getBase().getAllowFlight())
 		{
 			user.getBase().setFlying(false);

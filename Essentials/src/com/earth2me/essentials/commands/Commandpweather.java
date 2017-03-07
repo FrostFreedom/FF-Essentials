@@ -11,7 +11,6 @@ import org.bukkit.entity.Player;
 
 public class Commandpweather extends EssentialsCommand
 {
-
 	public static final Set<String> getAliases = new HashSet<String>();
 	public static final Map<String, WeatherType> weatherAliases = new HashMap<String, WeatherType>();
 
@@ -167,14 +166,16 @@ public class Commandpweather extends EssentialsCommand
 		if (user != null)
 		{
 			users.add(user);
-		} // If that fails, Is the argument something like "*" or "all"?
+		}
+		// If that fails, Is the argument something like "*" or "all"?
 		else if (selector.equalsIgnoreCase("*") || selector.equalsIgnoreCase("all"))
 		{
 			for (User u : ess.getOnlineUsers())
 			{
 				users.add(u);
 			}
-		} // We failed to understand the world target...
+		}
+		// We failed to understand the world target...
 		else
 		{
 			throw new PlayerNotFoundException();

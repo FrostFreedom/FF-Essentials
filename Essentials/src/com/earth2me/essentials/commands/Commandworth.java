@@ -13,7 +13,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class Commandworth extends EssentialsCommand
 {
-
 	public Commandworth()
 	{
 		super("worth");
@@ -122,16 +121,16 @@ public class Commandworth extends EssentialsCommand
 
 		sender.sendMessage(is.getDurability() != 0
 						   ? tl("worthMeta",
-								is.getType().toString().toLowerCase(Locale.ENGLISH).replace("_", ""),
-								is.getDurability(),
-								NumberUtil.displayCurrency(result, ess),
-								amount,
-								NumberUtil.displayCurrency(worth, ess))
+							   is.getType().toString().toLowerCase(Locale.ENGLISH).replace("_", ""),
+							   is.getDurability(),
+							   NumberUtil.displayCurrency(result, ess),
+							   amount,
+							   NumberUtil.displayCurrency(worth, ess))
 						   : tl("worth",
-								is.getType().toString().toLowerCase(Locale.ENGLISH).replace("_", ""),
-								NumberUtil.displayCurrency(result, ess),
-								amount,
-								NumberUtil.displayCurrency(worth, ess)));
+							   is.getType().toString().toLowerCase(Locale.ENGLISH).replace("_", ""),
+							   NumberUtil.displayCurrency(result, ess),
+							   amount,
+							   NumberUtil.displayCurrency(worth, ess)));
 
 		return result;
 	}

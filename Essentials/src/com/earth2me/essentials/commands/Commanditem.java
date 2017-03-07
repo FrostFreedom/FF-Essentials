@@ -12,7 +12,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class Commanditem extends EssentialsCommand
 {
-
 	public Commanditem()
 	{
 		super("item");
@@ -60,11 +59,12 @@ public class Commanditem extends EssentialsCommand
 		{
 			MetaItemStack metaStack = new MetaItemStack(stack);
 			final boolean allowUnsafe = ess.getSettings().allowUnsafeEnchantments() && user.isAuthorized("essentials.enchantments.allowunsafe");
-
+			
 			metaStack.parseStringMeta(user.getSource(), allowUnsafe, args, 2, ess);
-
+			
 			stack = metaStack.getItemStack();
 		}
+
 
 		if (stack.getType() == Material.AIR)
 		{

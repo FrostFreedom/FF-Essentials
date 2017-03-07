@@ -33,7 +33,6 @@ import net.ess3.api.MaxMoneyException;
  */
 public class Economy
 {
-
 	public Economy()
 	{
 	}

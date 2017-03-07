@@ -9,7 +9,6 @@ import java.util.Map;
 
 public class BookPager
 {
-
 	private final transient IText text;
 	final double pageMax = 254;
 	final double charMax = 18.5;

@@ -13,7 +13,6 @@ import org.bukkit.event.server.PluginEnableEvent;
 
 public class EssentialsPluginListener implements Listener, IConf
 {
-
 	private final transient IEssentials ess;
 
 	public EssentialsPluginListener(final IEssentials ess)
@@ -32,7 +31,7 @@ public class EssentialsPluginListener implements Listener, IConf
 		ess.getAlternativeCommandsHandler().addPlugin(event.getPlugin());
 		if (!Methods.hasMethod() && Methods.setMethod(ess.getServer().getPluginManager()))
 		{
-			ess.getLogger().log(Level.INFO, "Payment method found (" + Methods.getMethod().getLongName() + " version: " + ess.getPaymentMethod().getMethod().getVersion() + ")");
+			ess.getLogger().log(Level.INFO, "Payment method found ({0} version: {1})", new Object[]{Methods.getMethod().getLongName(), ess.getPaymentMethod().getMethod().getVersion()});
 		}
 	}
 

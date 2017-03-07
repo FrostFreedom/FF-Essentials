@@ -7,7 +7,6 @@ import org.bukkit.Server;
 
 public class Commandpowertooltoggle extends EssentialsCommand
 {
-
 	public Commandpowertooltoggle()
 	{
 		super("powertooltoggle");

@@ -10,7 +10,6 @@ import org.bukkit.inventory.meta.BookMeta;
 
 public class Commandbook extends EssentialsCommand
 {
-
 	public Commandbook()
 	{
 		super("book");

@@ -13,7 +13,6 @@ import org.bukkit.command.CommandSender;
 
 public class Backup implements Runnable
 {
-
 	private static final Logger LOGGER = Logger.getLogger("Essentials");
 	private transient final Server server;
 	private transient final IEssentials ess;
@@ -137,11 +136,7 @@ public class Backup implements Runnable
 					});
 					child.waitFor();
 				}
-				catch (InterruptedException ex)
-				{
-					LOGGER.log(Level.SEVERE, null, ex);
-				}
-				catch (IOException ex)
+				catch (InterruptedException | IOException ex)
 				{
 					LOGGER.log(Level.SEVERE, null, ex);
 				}
@@ -149,7 +144,6 @@ public class Backup implements Runnable
 				{
 					class BackupEnableSaveTask implements Runnable
 					{
-
 						@Override
 						public void run()
 						{

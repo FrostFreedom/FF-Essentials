@@ -15,7 +15,6 @@ import org.bukkit.entity.Player;
 
 public class PlayerList
 {
-
 	// Cosmetic list formatting
 	public static String listUsers(final IEssentials ess, final List<User> users, final String seperator)
 	{
@@ -80,8 +79,8 @@ public class PlayerList
 		final Map<String, List<User>> playerList = new HashMap<String, List<User>>();
 		for (User onlineUser : ess.getOnlineUsers())
 		{
-			if ((sender == null && !showHidden && onlineUser.isHidden())
-				|| (sender != null && !showHidden && !sender.getBase().canSee(onlineUser.getBase())))
+			if ((sender == null && !showHidden && onlineUser.isHidden()) ||
+				(sender != null && !showHidden && !sender.getBase().canSee(onlineUser.getBase())))
 			{
 				continue;
 			}

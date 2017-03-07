@@ -9,7 +9,6 @@ import org.bukkit.event.HandlerList;
 
 public class UserBalanceUpdateEvent extends Event
 {
-
 	private static final HandlerList handlers = new HandlerList();
 	private final Player player;
 	private final BigDecimal originalBalance;
@@ -42,9 +41,9 @@ public class UserBalanceUpdateEvent extends Event
 	{
 		return balance;
 	}
-
+	
 	public BigDecimal getOldBalance()
-	{
-		return originalBalance;
-	}
+ 	{
+ 		return originalBalance;
+ 	}
 }

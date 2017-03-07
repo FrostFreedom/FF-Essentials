@@ -39,7 +39,6 @@ import com.google.common.base.Function;
 import com.google.common.base.Throwables;
 import com.google.common.collect.Iterables;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -89,7 +88,6 @@ import org.yaml.snakeyaml.error.YAMLException;
 
 public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 {
-
 	public static final int BUKKIT_VERSION = 3050;
 	private static final Logger LOGGER = Logger.getLogger("Essentials");
 	private transient ISettings settings;
@@ -142,7 +140,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 		i18n.updateLocale("en");
 		LOGGER.log(Level.INFO, tl("usingTempFolderForTesting"));
 		LOGGER.log(Level.INFO, dataFolder.toString());
-		this.initialize(null, server, new PluginDescriptionFile(new FileReader(new File("src" + File.separator + "plugin.yml"))), dataFolder, null, null);
 		settings = new Settings(this);
 		userMap = new UserMap(this);
 		permissionsHandler = new PermissionsHandler(this, false);
@@ -158,7 +155,7 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 		try
 		{
 			LOGGER.setParent(this.getLogger());
-			EssentialsHandler.setLogger(LOGGER); // TFM
+			EssentialsHandler.setLogger(LOGGER);
 			execTimer = new ExecuteTimer();
 			execTimer.start();
 			i18n = new I18n(this);
@@ -349,7 +346,7 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 		Economy.setEss(null);
 		Trade.closeLog();
 		getUserMap().getUUIDMap().forceWriteUUIDMap();
-
+		
 		HandlerList.unregisterAll(this);
 	}
 
@@ -446,15 +443,15 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 			if (bSenderBlock != null)
 			{
 				Bukkit.getLogger().log(Level.INFO, "CommandBlock at {0},{1},{2} issued server command: /{3} {4}", new Object[]
-							   {
-								   bSenderBlock.getX(), bSenderBlock.getY(), bSenderBlock.getZ(), commandLabel, EssentialsCommand.getFinalArg(args, 0)
+				{
+					bSenderBlock.getX(), bSenderBlock.getY(), bSenderBlock.getZ(), commandLabel, EssentialsCommand.getFinalArg(args, 0)
 				});
 			}
 			else if (user == null)
 			{
 				Bukkit.getLogger().log(Level.INFO, "{0} issued server command: /{1} {2}", new Object[]
-							   {
-								   cSender.getName(), commandLabel, EssentialsCommand.getFinalArg(args, 0)
+				{
+					cSender.getName(), commandLabel, EssentialsCommand.getFinalArg(args, 0)
 				});
 			}
 
@@ -490,7 +487,7 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 				cmd.setEssentials(this);
 				cmd.setEssentialsModule(module);
 			}
-			catch (Exception ex)
+			catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex)
 			{
 				sender.sendMessage(tl("commandNotLoaded", commandLabel));
 				LOGGER.log(Level.SEVERE, tl("commandNotLoaded", commandLabel), ex);
@@ -531,11 +528,7 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 				}
 				return true;
 			}
-			catch (NoChargeException ex)
-			{
-				return true;
-			}
-			catch (QuietAbortException ex)
+			catch (NoChargeException | QuietAbortException ex)
 			{
 				return true;
 			}
@@ -836,7 +829,7 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 	{
 		return this.getScheduler().runTaskLaterAsynchronously(this, run, delay);
 	}
-
+	
 	@Override
 	public BukkitTask runTaskTimerAsynchronously(final Runnable run, final long delay, final long period)
 	{
@@ -947,10 +940,8 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 		});
 	}
 
-
 	private static class EssentialsWorldListener implements Listener, Runnable
 	{
-
 		private transient final IEssentials ess;
 
 		public EssentialsWorldListener(final IEssentials ess)

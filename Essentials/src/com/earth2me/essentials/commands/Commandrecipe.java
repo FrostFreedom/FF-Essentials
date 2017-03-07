@@ -15,7 +15,6 @@ import org.bukkit.inventory.*;
 
 public class Commandrecipe extends EssentialsCommand
 {
-
 	public Commandrecipe()
 	{
 		super("recipe");
@@ -114,7 +113,10 @@ public class Commandrecipe extends EssentialsCommand
 					{
 						continue;
 					}
-					item.setAmount(0);
+					if (item.getDurability() == Short.MAX_VALUE)
+					{
+						item.setDurability((short)0);
+					}
 					view.getTopInventory().setItem(j * 3 + k + 1, item);
 				}
 			}
@@ -163,7 +165,12 @@ public class Commandrecipe extends EssentialsCommand
 			final InventoryView view = user.getBase().openWorkbench(null, true);
 			for (int i = 0; i < ingredients.size(); i++)
 			{
-				view.setItem(i + 1, ingredients.get(i));
+				final ItemStack item = ingredients.get(i);
+				if (item.getDurability() == Short.MAX_VALUE)
+				{
+					item.setDurability((short)0);
+				}
+				view.setItem(i + 1, item);
 			}
 
 		}

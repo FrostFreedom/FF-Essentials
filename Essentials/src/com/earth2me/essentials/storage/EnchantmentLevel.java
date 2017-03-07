@@ -6,7 +6,6 @@ import org.bukkit.enchantments.Enchantment;
 
 public class EnchantmentLevel implements Entry<Enchantment, Integer>
 {
-
 	private Enchantment enchantment;
 	private int level;
 

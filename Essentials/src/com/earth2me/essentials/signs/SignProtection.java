@@ -18,7 +18,6 @@ import org.bukkit.inventory.ItemStack;
 @Deprecated // This sign will be removed soon
 public class SignProtection extends EssentialsSign
 {
-
 	private final transient Set<Material> protectedBlocks = EnumSet.noneOf(Material.class);
 
 	public SignProtection()
@@ -165,14 +164,14 @@ public class SignProtection extends EssentialsSign
 	private Block[] getAdjacentBlocks(final Block block)
 	{
 		return new Block[]
-		{
-			block.getRelative(BlockFace.NORTH),
-			block.getRelative(BlockFace.SOUTH),
-			block.getRelative(BlockFace.EAST),
-			block.getRelative(BlockFace.WEST),
-			block.getRelative(BlockFace.DOWN),
-			block.getRelative(BlockFace.UP)
-		};
+				{
+					block.getRelative(BlockFace.NORTH),
+					block.getRelative(BlockFace.SOUTH),
+					block.getRelative(BlockFace.EAST),
+					block.getRelative(BlockFace.WEST),
+					block.getRelative(BlockFace.DOWN),
+					block.getRelative(BlockFace.UP)
+				};
 	}
 
 	public SignProtectionState isBlockProtected(final Block block, final User user, final String username, boolean secure)
@@ -282,6 +281,7 @@ public class SignProtection extends EssentialsSign
 			return true;
 		}
 
+
 		player.sendMessage(tl("noAccessPermission", block.getType().toString().toLowerCase(Locale.ENGLISH)));
 		return false;
 	}
@@ -303,6 +303,7 @@ public class SignProtection extends EssentialsSign
 			checkIfSignsAreBroken(block, player, username, ess);
 			return true;
 		}
+
 
 		player.sendMessage(tl("noDestroyPermission", block.getType().toString().toLowerCase(Locale.ENGLISH)));
 		return false;
@@ -348,10 +349,8 @@ public class SignProtection extends EssentialsSign
 		return state == SignProtectionState.NOSIGN;
 	}
 
-
 	public enum SignProtectionState
 	{
-
 		NOT_ALLOWED, ALLOWED, NOSIGN, OWNER
 	}
 }

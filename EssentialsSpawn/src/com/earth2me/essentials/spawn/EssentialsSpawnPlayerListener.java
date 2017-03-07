@@ -101,8 +101,7 @@ public class EssentialsSpawnPlayerListener implements Listener
 			@Override
 			public void run()
 			{
-				if (!user.getBase().isOnline())
-				{
+				if (!user.getBase().isOnline()) {
 					return;
 				}
 

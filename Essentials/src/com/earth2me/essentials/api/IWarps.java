@@ -9,7 +9,6 @@ import org.bukkit.Location;
 
 public interface IWarps extends IConf
 {
-
 	/**
 	 * Get a warp by name
 	 *

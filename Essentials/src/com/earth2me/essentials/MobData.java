@@ -29,7 +29,6 @@ import org.bukkit.material.Colorable;
 
 public enum MobData
 {
-
 	BABY_AGEABLE("baby", Ageable.class, Data.BABY, true),
 	ADULT_AGEABLE("adult", Ageable.class, Data.ADULT, true),
 	BABY_PIG("piglet", EntityType.PIG, Data.BABY, false),
@@ -116,7 +115,6 @@ public enum MobData
 
 	public enum Data
 	{
-
 		ADULT,
 		BABY,
 		CHEST,

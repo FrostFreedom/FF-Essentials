@@ -7,7 +7,6 @@ import org.bukkit.Server;
 
 public class Commandtpdeny extends EssentialsCommand
 {
-
 	public Commandtpdeny()
 	{
 		super("tpdeny");

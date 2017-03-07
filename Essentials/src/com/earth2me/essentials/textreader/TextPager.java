@@ -10,7 +10,6 @@ import java.util.Map;
 
 public class TextPager
 {
-
 	private final transient IText text;
 	private final transient boolean onePage;
 

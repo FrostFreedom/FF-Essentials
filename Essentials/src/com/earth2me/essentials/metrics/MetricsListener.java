@@ -12,7 +12,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class MetricsListener implements Listener
 {
-
 	private final transient Server server;
 	private final transient IEssentials ess;
 	private final transient MetricsStarter starter;

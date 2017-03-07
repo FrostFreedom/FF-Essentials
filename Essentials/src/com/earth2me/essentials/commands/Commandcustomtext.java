@@ -11,7 +11,6 @@ import org.bukkit.Server;
 
 public class Commandcustomtext extends EssentialsCommand
 {
-
 	public Commandcustomtext()
 	{
 		super("customtext");
@@ -19,13 +18,13 @@ public class Commandcustomtext extends EssentialsCommand
 
 	@Override
 	protected void run(final Server server, final CommandSource sender, final String commandLabel, final String[] args) throws Exception
-	{
+	{			
 		if (sender.isPlayer())
 		{
 			ess.getUser(sender.getPlayer()).setDisplayNick();
 		}
-
-		final IText input = new TextInput(sender, "custom", true, ess);
+		
+		final IText input = new TextInput(sender, "custom", true, ess);		
 		final IText output = new KeywordReplacer(input, sender, ess);
 		final TextPager pager = new TextPager(output);
 		String chapter = commandLabel;
@@ -40,7 +39,7 @@ public class Commandcustomtext extends EssentialsCommand
 		{
 			page = args.length > 0 ? args[0] : null;
 		}
-
+		
 		pager.showPage(chapter, page, null, sender);
 	}
 }

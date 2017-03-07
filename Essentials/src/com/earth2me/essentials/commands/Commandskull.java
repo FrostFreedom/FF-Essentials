@@ -8,30 +8,25 @@ import org.bukkit.Server;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
 
-
 public class Commandskull extends EssentialsCommand
 {
-
 	public Commandskull()
 	{
 		super("skull");
 	}
-
+	
 	@Override
 	protected void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{
 		String owner;
 
-		if (args.length > 0 && user.isAuthorized("essentials.skull.others"))
-		{
-			if (!args[0].matches("^[A-Za-z0-9_]+$"))
-			{
+		if (args.length > 0 && user.isAuthorized("essentials.skull.others")) {
+			if (!args[0].matches("^[A-Za-z0-9_]+$")) {
 				throw new IllegalArgumentException(tl("alphaNames"));
 			}
 			owner = args[0];
 		}
-		else
-		{
+		else {
 			owner = user.getName();
 		}
 
@@ -39,18 +34,16 @@ public class Commandskull extends EssentialsCommand
 		SkullMeta metaSkull = null;
 		boolean spawn = false;
 
-		if (itemSkull != null && itemSkull.getType() == Material.SKULL_ITEM && itemSkull.getDurability() == 3)
-		{
-			metaSkull = (SkullMeta)itemSkull.getItemMeta();
+		if (itemSkull != null && itemSkull.getType() == Material.SKULL_ITEM && itemSkull.getDurability() == 3) {
+			metaSkull = (SkullMeta) itemSkull.getItemMeta();
 		}
 		else if (user.isAuthorized("essentials.skull.spawn"))
 		{
-			itemSkull = new ItemStack(Material.SKULL_ITEM, 1, (byte)3);
-			metaSkull = (SkullMeta)itemSkull.getItemMeta();
+			itemSkull = new ItemStack(Material.SKULL_ITEM, 1, (byte) 3);
+			metaSkull = (SkullMeta) itemSkull.getItemMeta();
 			spawn = true;
 		}
-		else
-		{
+		else {
 			throw new Exception(tl("invalidSkull"));
 		}
 
@@ -64,13 +57,11 @@ public class Commandskull extends EssentialsCommand
 
 		itemSkull.setItemMeta(metaSkull);
 
-		if (spawn)
-		{
+		if (spawn) {
 			InventoryWorkaround.addItems(user.getBase().getInventory(), itemSkull);
 			user.sendMessage(tl("givenSkull", owner));
 		}
-		else
-		{
+		else {
 			user.sendMessage(tl("skullChanged", owner));
 		}
 	}

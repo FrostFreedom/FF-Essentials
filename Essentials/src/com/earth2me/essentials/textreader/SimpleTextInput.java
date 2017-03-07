@@ -5,7 +5,6 @@ import java.util.*;
 
 public class SimpleTextInput implements IText
 {
-
 	private final transient List<String> lines = new ArrayList<String>();
 
 	public SimpleTextInput(final String input)

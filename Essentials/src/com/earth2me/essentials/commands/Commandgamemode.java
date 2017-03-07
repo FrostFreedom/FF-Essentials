@@ -12,7 +12,6 @@ import org.bukkit.entity.Player;
 
 public class Commandgamemode extends EssentialsCommand
 {
-
 	public Commandgamemode()
 	{
 		super("gamemode");
@@ -124,7 +123,7 @@ public class Commandgamemode extends EssentialsCommand
 			mode = GameMode.ADVENTURE;
 		}
 		else if (modeString.equalsIgnoreCase("gmsp") || modeString.equalsIgnoreCase("egmsp")
-				 || modeString.contains("spect") || modeString.equalsIgnoreCase("3") || modeString.equalsIgnoreCase("sp"))
+			|| modeString.contains("spect") || modeString.equalsIgnoreCase("3") || modeString.equalsIgnoreCase("sp"))
 		{
 			mode = GameMode.SPECTATOR;
 		}

@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 
 public class StringUtil
 {
-
 	private static final Pattern INVALIDFILECHARS = Pattern.compile("[^a-z0-9-]");
 	private static final Pattern STRICTINVALIDCHARS = Pattern.compile("[^a-z0-9]");
 	private static final Pattern INVALIDCHARS = Pattern.compile("[^\t\n\r\u0020-\u007E\u0085\u00A0-\uD7FF\uE000-\uFFFC]");
@@ -62,17 +61,16 @@ public class StringUtil
 		}
 		return buf.toString();
 	}
-
+	
 	public static String joinListSkip(String seperator, String skip, Object... list)
 	{
 		StringBuilder buf = new StringBuilder();
 		for (Object each : list)
 		{
-			if (each.toString().equalsIgnoreCase(skip))
-			{
+			if (each.toString().equalsIgnoreCase(skip)) {
 				continue;
 			}
-
+			
 			if (buf.length() > 0)
 			{
 				buf.append(seperator);
@@ -96,7 +94,7 @@ public class StringUtil
 		}
 		return buf.toString();
 	}
-
+	
 	private StringUtil()
 	{
 	}

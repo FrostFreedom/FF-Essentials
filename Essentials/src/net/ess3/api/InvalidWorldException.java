@@ -5,7 +5,6 @@ import static com.earth2me.essentials.I18n.tl;
 
 public class InvalidWorldException extends Exception
 {
-
 	private final String world;
 
 	public InvalidWorldException(final String world)

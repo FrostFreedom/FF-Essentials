@@ -18,7 +18,6 @@ import java.util.UUID;
 
 public class Commandmail extends EssentialsCommand
 {
-
 	private static int mailsPerMinute = 0;
 	private static long timestamp = 0;
 
@@ -39,11 +38,11 @@ public class Commandmail extends EssentialsCommand
 				user.sendMessage(tl("noMail"));
 				throw new NoChargeException();
 			}
-
+			
 			IText input = new SimpleTextInput(mail);
-			final TextPager pager = new TextPager(input);
+			final TextPager pager = new TextPager(input);			
 			pager.showPage(args.length > 1 ? args[1] : null, null, commandLabel + " " + args[0], user.getSource());
-
+			
 			user.sendMessage(tl("mailClear"));
 			return;
 		}
@@ -155,7 +154,6 @@ public class Commandmail extends EssentialsCommand
 
 	private class SendAll implements Runnable
 	{
-
 		String message;
 
 		public SendAll(String message)

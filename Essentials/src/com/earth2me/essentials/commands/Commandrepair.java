@@ -14,7 +14,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class Commandrepair extends EssentialsCommand
 {
-
 	public Commandrepair()
 	{
 		super("repair");
@@ -76,7 +75,7 @@ public class Commandrepair extends EssentialsCommand
 		{
 			repairItems(user.getBase().getInventory().getArmorContents(), user, repaired);
 		}
-
+		
 		user.getBase().updateInventory();
 		if (repaired.isEmpty())
 		{

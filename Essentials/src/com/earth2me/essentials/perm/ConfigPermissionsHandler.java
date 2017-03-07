@@ -7,7 +7,6 @@ import org.bukkit.plugin.Plugin;
 
 public class ConfigPermissionsHandler extends SuperpermsHandler
 {
-
 	private final transient IEssentials ess;
 
 	public ConfigPermissionsHandler(final Plugin ess)

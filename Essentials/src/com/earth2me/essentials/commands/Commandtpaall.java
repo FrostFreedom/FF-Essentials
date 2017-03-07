@@ -9,7 +9,6 @@ import org.bukkit.entity.Player;
 
 public class Commandtpaall extends EssentialsCommand
 {
-
 	public Commandtpaall()
 	{
 		super("tpaall");

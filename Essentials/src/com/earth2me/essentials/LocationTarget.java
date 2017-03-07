@@ -5,7 +5,6 @@ import org.bukkit.Location;
 
 public class LocationTarget implements ITarget
 {
-
 	private final Location location;
 
 	LocationTarget(Location location)

@@ -10,7 +10,6 @@ import org.bukkit.Server;
 
 public class Commandmotd extends EssentialsCommand
 {
-
 	public Commandmotd()
 	{
 		super("motd");
@@ -23,7 +22,7 @@ public class Commandmotd extends EssentialsCommand
 		{
 			ess.getUser(sender.getPlayer()).setDisplayNick();
 		}
-
+		
 		final IText input = new TextInput(sender, "motd", true, ess);
 		final IText output = new KeywordReplacer(input, sender, ess);
 		final TextPager pager = new TextPager(output);

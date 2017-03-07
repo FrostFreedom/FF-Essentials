@@ -9,7 +9,6 @@ import org.bukkit.Server;
 
 public class Commandme extends EssentialsCommand
 {
-
 	public Commandme()
 	{
 		super("me");

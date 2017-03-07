@@ -9,7 +9,6 @@ import org.bukkit.World;
 
 public class Commandweather extends EssentialsCommand
 {
-
 	public Commandweather()
 	{
 		super("weather");

@@ -6,7 +6,6 @@ import org.bukkit.entity.Player;
 
 public interface IPermissionsHandler
 {
-
 	String getGroup(Player base);
 
 	List<String> getGroups(Player base);

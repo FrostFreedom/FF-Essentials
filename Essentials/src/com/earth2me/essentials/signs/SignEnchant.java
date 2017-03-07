@@ -10,7 +10,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class SignEnchant extends EssentialsSign
 {
-
 	public SignEnchant()
 	{
 		super("Enchant");
@@ -51,7 +50,7 @@ public class SignEnchant extends EssentialsSign
 			sign.setLine(2, "§c<enchant>");
 			throw new SignException(ex.getMessage(), ex);
 		}
-		final boolean allowUnsafe = ess.getSettings().allowUnsafeEnchantments()
+		final boolean allowUnsafe = ess.getSettings().allowUnsafeEnchantments() 
 									&& player.isAuthorized("essentials.enchantments.allowunsafe") && player.isAuthorized("essentials.signs.enchant.allowunsafe");
 		if (level < 0 || (!allowUnsafe && level > enchantment.getMaxLevel()))
 		{

@@ -12,7 +12,6 @@ import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
 public class Commandworld extends EssentialsCommand
 {
-
 	public Commandworld()
 	{
 		super("world");

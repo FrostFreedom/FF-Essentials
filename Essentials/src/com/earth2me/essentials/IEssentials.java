@@ -20,7 +20,6 @@ import org.bukkit.scheduler.BukkitTask;
 
 public interface IEssentials extends Plugin
 {
-
 	void addReloadListener(IConf listener);
 
 	void reload();
@@ -29,11 +28,11 @@ public interface IEssentials extends Plugin
 
 	@Deprecated
 	User getUser(Object base);
-
+	
 	User getUser(UUID base);
-
+	
 	User getUser(String base);
-
+	
 	User getUser(Player base);
 
 	I18n getI18n();
@@ -65,7 +64,7 @@ public interface IEssentials extends Plugin
 	BukkitTask runTaskAsynchronously(Runnable run);
 
 	BukkitTask runTaskLaterAsynchronously(Runnable run, long delay);
-
+	
 	BukkitTask runTaskTimerAsynchronously(Runnable run, long delay, long period);
 
 	int scheduleSyncDelayedTask(Runnable run);

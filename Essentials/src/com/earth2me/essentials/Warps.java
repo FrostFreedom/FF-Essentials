@@ -16,7 +16,6 @@ import org.bukkit.Server;
 
 public class Warps implements IConf, net.ess3.api.IWarps
 {
-
 	private static final Logger logger = Logger.getLogger("Essentials");
 	private final Map<StringIgnoreCase, EssentialsConf> warpPoints = new HashMap<StringIgnoreCase, EssentialsConf>();
 	private final File warpsFolder;
@@ -148,10 +147,8 @@ public class Warps implements IConf, net.ess3.api.IWarps
 		return getList().size();
 	}
 
-
 	private static class StringIgnoreCase
 	{
-
 		private final String string;
 
 		public StringIgnoreCase(String string)

@@ -9,7 +9,6 @@ import net.ess3.api.IEssentials;
 
 public class SignHeal extends EssentialsSign
 {
-
 	public SignHeal()
 	{
 		super("Heal");

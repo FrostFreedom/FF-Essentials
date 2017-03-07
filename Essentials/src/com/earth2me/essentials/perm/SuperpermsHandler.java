@@ -6,7 +6,6 @@ import org.bukkit.entity.Player;
 
 public class SuperpermsHandler implements IPermissionsHandler
 {
-
 	@Override
 	public String getGroup(final Player base)
 	{
@@ -42,7 +41,7 @@ public class SuperpermsHandler implements IPermissionsHandler
 			{
 				return base.hasPermission(permCheck);
 			}
-
+		
 			index = node.lastIndexOf('.');
 			if (index < 1)
 			{

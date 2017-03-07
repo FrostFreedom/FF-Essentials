@@ -16,7 +16,6 @@ import org.bukkit.entity.*;
 
 public class Commandremove extends EssentialsCommand
 {
-
 	public Commandremove()
 	{
 		super("remove");
@@ -160,14 +159,14 @@ public class Commandremove extends EssentialsCommand
 				{
 
 					// We should skip any TAMED animals unless we are specifially targetting them.
-					if (e instanceof Tameable && ((Tameable)e).isTamed()
+					if (e instanceof Tameable && ((Tameable)e).isTamed() 
 						&& !removeTypes.contains(ToRemove.TAMED))
 					{
 						continue;
 					}
 
 					// We should skip any NAMED animals unless we are specifially targetting them.
-					if (e instanceof LivingEntity && ((LivingEntity)e).getCustomName() != null
+					if (e instanceof LivingEntity && ((LivingEntity)e).getCustomName() != null 
 						&& !removeTypes.contains(ToRemove.NAMED))
 					{
 						continue;
@@ -304,7 +303,6 @@ public class Commandremove extends EssentialsCommand
 
 	private enum ToRemove
 	{
-
 		DROPS,
 		ARROWS,
 		BOATS,

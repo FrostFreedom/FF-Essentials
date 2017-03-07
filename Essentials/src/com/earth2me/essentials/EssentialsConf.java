@@ -32,7 +32,6 @@ import org.bukkit.util.Vector;
 
 public class EssentialsConf extends YamlConfiguration
 {
-
 	protected static final Logger LOGGER = Logger.getLogger("Essentials");
 	protected final File configFile;
 	protected String templateName = null;
@@ -120,6 +119,7 @@ public class EssentialsConf extends YamlConfiguration
 			}
 		}
 
+
 		try
 		{
 			final FileInputStream inputStream = new FileInputStream(configFile);
@@ -153,7 +153,7 @@ public class EssentialsConf extends YamlConfiguration
 				{
 					buffer.rewind();
 					data.clear();
-					LOGGER.log(Level.INFO, "File " + configFile.getAbsolutePath().toString() + " is not utf-8 encoded, trying " + Charset.defaultCharset().displayName());
+					LOGGER.log(Level.INFO, "File {0} is not utf-8 encoded, trying {1}", new Object[]{configFile.getAbsolutePath().toString(), Charset.defaultCharset().displayName()});
 					decoder = Charset.defaultCharset().newDecoder();
 					result = decoder.decode(buffer, data, true);
 					if (result.isError())
@@ -328,11 +328,7 @@ public class EssentialsConf extends YamlConfiguration
 				future.get();
 			}
 		}
-		catch (InterruptedException ex)
-		{
-			LOGGER.log(Level.SEVERE, ex.getMessage(), ex);
-		}
-		catch (ExecutionException ex)
+		catch (InterruptedException | ExecutionException ex)
 		{
 			LOGGER.log(Level.SEVERE, ex.getMessage(), ex);
 		}
@@ -365,7 +361,6 @@ public class EssentialsConf extends YamlConfiguration
 
 	private static class WriteRunner implements Runnable
 	{
-
 		private final File configFile;
 		private final String data;
 		private final AtomicInteger pendingDiskWrites;
@@ -590,11 +585,7 @@ public class EssentialsConf extends YamlConfiguration
 			{
 				return new BigDecimal(input, MathContext.DECIMAL128);
 			}
-			catch (NumberFormatException e)
-			{
-				return def;
-			}
-			catch (ArithmeticException e)
+			catch (NumberFormatException | ArithmeticException e)
 			{
 				return def;
 			}

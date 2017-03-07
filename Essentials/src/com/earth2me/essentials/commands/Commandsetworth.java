@@ -11,7 +11,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class Commandsetworth extends EssentialsCommand
 {
-
 	public Commandsetworth()
 	{
 		super("setworth");

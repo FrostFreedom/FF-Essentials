@@ -16,7 +16,6 @@ import org.bukkit.World;
 
 public class Commandgc extends EssentialsCommand
 {
-
 	public Commandgc()
 	{
 		super("gc");

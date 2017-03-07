@@ -11,7 +11,6 @@ import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
 public class Commandtop extends EssentialsCommand
 {
-
 	public Commandtop()
 	{
 		super("top");
@@ -27,6 +26,6 @@ public class Commandtop extends EssentialsCommand
 		final Location loc = LocationUtil.getSafeDestination(new Location(user.getWorld(), topX, user.getWorld().getMaxHeight(), topZ, yaw, pitch));
 		user.getTeleport().teleport(loc, new Trade(this.getName(), ess), TeleportCause.COMMAND);
 		user.sendMessage(tl("teleportTop", loc.getWorld().getName(), loc.getBlockX(), loc.getBlockY(), loc.getBlockZ()));
-
+		
 	}
 }

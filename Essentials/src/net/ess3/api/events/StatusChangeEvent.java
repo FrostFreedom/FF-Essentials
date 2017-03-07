@@ -10,7 +10,6 @@ import org.bukkit.event.Cancellable;
  */
 public class StatusChangeEvent extends StateChangeEvent implements Cancellable
 {
-
 	private boolean newValue;
 
 	public StatusChangeEvent(IUser affected, IUser controller, boolean value)

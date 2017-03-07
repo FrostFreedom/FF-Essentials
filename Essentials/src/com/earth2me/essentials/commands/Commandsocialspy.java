@@ -8,7 +8,6 @@ import org.bukkit.Server;
 
 public class Commandsocialspy extends EssentialsToggleCommand
 {
-
 	public Commandsocialspy()
 	{
 		super("socialspy", "essentials.socialspy.others");
@@ -54,6 +53,7 @@ public class Commandsocialspy extends EssentialsToggleCommand
 		}
 
 		user.setSocialSpyEnabled(enabled);
+
 
 		user.sendMessage(tl("socialSpy", user.getDisplayName(), enabled ? tl("enabled") : tl("disabled")));
 		if (!sender.isPlayer() || !sender.getPlayer().equals(user.getBase()))

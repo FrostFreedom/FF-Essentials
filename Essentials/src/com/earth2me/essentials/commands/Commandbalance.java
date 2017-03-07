@@ -10,7 +10,6 @@ import org.bukkit.Server;
 
 public class Commandbalance extends EssentialsCommand
 {
-
 	public Commandbalance()
 	{
 		super("balance");

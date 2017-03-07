@@ -11,7 +11,6 @@ import org.bukkit.Bukkit;
 
 public abstract class AsyncStorageObjectHolder<T extends StorageObject> implements IConf, IStorageObjectHolder<T>, IReload
 {
-
 	private transient T data;
 	private final transient ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
 	private final transient Class<T> clazz;
@@ -99,7 +98,6 @@ public abstract class AsyncStorageObjectHolder<T extends StorageObject> implemen
 
 	private class StorageObjectDataWriter extends AbstractDelayedYamlFileWriter
 	{
-
 		StorageObjectDataWriter()
 		{
 			super(ess, getStorageFile());
@@ -123,7 +121,6 @@ public abstract class AsyncStorageObjectHolder<T extends StorageObject> implemen
 
 	private class StorageObjectDataReader extends AbstractDelayedYamlFileReader<T>
 	{
-
 		StorageObjectDataReader()
 		{
 			super(ess, getStorageFile(), clazz);

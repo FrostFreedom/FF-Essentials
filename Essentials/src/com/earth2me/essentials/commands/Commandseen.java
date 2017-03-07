@@ -21,7 +21,6 @@ import org.bukkit.Server;
 
 public class Commandseen extends EssentialsCommand
 {
-
 	public Commandseen()
 	{
 		super("seen");
@@ -180,7 +179,7 @@ public class Commandseen extends EssentialsCommand
 		}
 		if (extra)
 		{
-			if (!user.getLastLoginAddress().isEmpty() && EssentialsHandler.isSuperAdmin(sender.getPlayer()))
+			if (!user.getLastLoginAddress().isEmpty())
 			{
 				sender.sendMessage(tl("whoisIPAddress", user.getLastLoginAddress()));
 			}

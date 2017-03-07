@@ -12,7 +12,6 @@ import org.bukkit.plugin.Plugin;
 
 public class AlternativeCommandsHandler
 {
-
 	private static final Logger LOGGER = Logger.getLogger("Essentials");
 	private final transient Map<String, List<PluginCommand>> altcommands = new HashMap<String, List<PluginCommand>>();
 	private final transient Map<String, String> disabledList = new HashMap<String, String>();
@@ -128,7 +127,7 @@ public class AlternativeCommandsHandler
 		final String altString = pc.getPlugin().getName() + ":" + pc.getLabel();
 		if (ess.getSettings().isDebug())
 		{
-			LOGGER.log(Level.INFO, "Essentials: Alternative command " + label + " found, using " + altString);
+			LOGGER.log(Level.INFO, "Essentials: Alternative command {0} found, using {1}", new Object[]{label, altString});
 		}
 		disabledList.put(label, altString);
 	}

@@ -8,10 +8,8 @@ import org.bukkit.Server;
 import org.bukkit.entity.Ocelot;
 
 // This command is not documented on the wiki #EasterEgg
-
 public class Commandkittycannon extends EssentialsCommand
 {
-
 	private static final Random random = new Random();
 
 	public Commandkittycannon()
@@ -36,7 +34,6 @@ public class Commandkittycannon extends EssentialsCommand
 
 		class KittyCannonExplodeTask implements Runnable
 		{
-
 			@Override
 			public void run()
 			{

@@ -16,7 +16,6 @@ import org.bukkit.permissions.ServerOperator;
 
 public class PlayerExtension
 {
-
 	protected Player base;
 
 	public PlayerExtension(final Player base)
@@ -33,19 +32,17 @@ public class PlayerExtension
 	{
 		return this.base = base;
 	}
-
+	
 	public Server getServer()
 	{
 		return base.getServer();
 	}
-
-	public World getWorld()
-	{
+	
+	public World getWorld() {
 		return base.getWorld();
 	}
-
-	public Location getLocation()
-	{
+	
+	public Location getLocation() {
 		return base.getLocation();
 	}
 }

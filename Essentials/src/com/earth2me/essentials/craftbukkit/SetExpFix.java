@@ -7,7 +7,6 @@ public class SetExpFix
 {
 	//This method is used to update both the recorded total experience and displayed total experience.
 	//We reset both types to prevent issues.
-
 	public static void setTotalExperience(final Player player, final int exp)
 	{
 		if (exp < 0)
@@ -46,17 +45,17 @@ public class SetExpFix
 	}
 
 	//new Exp Math from 1.8
-	public static int getExpAtLevel(final int level)
+	public  static  int getExpAtLevel(final int level)
 	{
 		if (level <= 15)
 		{
-			return (2 * level) + 7;
+			return (2*level) + 7;
 		}
-		if ((level >= 16) && (level <= 30))
+		if ((level >= 16) && (level <=30))
 		{
-			return (5 * level) - 38;
+			return (5 * level) -38;
 		}
-		return (9 * level) - 158;
+		return (9*level)-158;
 
 	}
 
@@ -95,10 +94,10 @@ public class SetExpFix
 		}
 		return exp;
 	}
-
+	
 	public static int getExpUntilNextLevel(final Player player)
 	{
-		int exp = (int)Math.round(getExpAtLevel(player) * player.getExp());
+		int exp = (int)Math.round(getExpAtLevel(player) * player.getExp());		
 		int nextLevel = player.getLevel();
 		return getExpAtLevel(nextLevel) - exp;
 	}

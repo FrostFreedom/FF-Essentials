@@ -27,7 +27,6 @@ import org.bukkit.potion.PotionEffectType;
 
 public class User extends UserData implements Comparable<User>, IReplyTo, net.ess3.api.IUser
 {
-
 	private static final Logger logger = Logger.getLogger("Essentials");
 	private CommandSource replyTo = null;
 	private transient UUID teleportRequester;
@@ -305,8 +304,7 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 		{
 			nickname = getName();
 		}
-		else if (nick.equalsIgnoreCase(getName()))
-		{
+		else if (nick.equalsIgnoreCase(getName())) {
 			nickname = nick;
 		}
 		else
@@ -336,15 +334,13 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 			//These two extra toggles are not documented, because they are mostly redundant #EasterEgg
 			if (!ess.getSettings().disablePrefix())
 			{
-				final String ptext = ess.getPermissionsHandler().getPrefix(base).replace('&',
-																						 '§');
+				final String ptext = ess.getPermissionsHandler().getPrefix(base).replace('&', '§');
 				prefix.insert(0, ptext);
 				suffix = "§r";
 			}
 			if (!ess.getSettings().disableSuffix())
 			{
-				final String stext = ess.getPermissionsHandler().getSuffix(base).replace('&',
-																						 '§');
+				final String stext = ess.getPermissionsHandler().getSuffix(base).replace('&', '§');
 				suffix = stext + "§r";
 				suffix = suffix.replace("§f§f", "§f").replace("§f§r", "§r").replace("§r§r", "§r");
 			}
@@ -541,7 +537,7 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 	{
 		return hidden;
 	}
-
+	
 	public boolean isHidden(final Player player)
 	{
 		return hidden || !player.canSee(getBase());
@@ -625,6 +621,7 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 			final String kickReason = tl("autoAfkKickReason", autoafkkick / 60.0);
 			lastActivity = 0;
 			this.getBase().kickPlayer(kickReason);
+
 
 			for (User user : ess.getOnlineUsers())
 			{
@@ -749,7 +746,7 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 	{
 		return teleportInvulnerabilityTimestamp != 0 && teleportInvulnerabilityTimestamp >= System.currentTimeMillis();
 	}
-
+	
 	public boolean canInteractVanished()
 	{
 		return isAuthorized("essentials.vanish.interact");

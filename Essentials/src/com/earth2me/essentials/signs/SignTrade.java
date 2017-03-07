@@ -13,10 +13,8 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 //TODO: TL exceptions
-
 public class SignTrade extends EssentialsSign
 {
-
 	public SignTrade()
 	{
 		super("Trade");
@@ -121,24 +119,24 @@ public class SignTrade extends EssentialsSign
 	protected boolean onSignBreak(final ISign sign, final User player, final String username, final IEssentials ess) throws SignException, MaxMoneyException
 	{
 		final String signOwner = sign.getLine(3);
-
+		
 		final boolean isOwner = (signOwner.length() > 3 && signOwner.substring(2).equalsIgnoreCase(username));
 		final boolean canBreak = isOwner ? true : player.isAuthorized("essentials.signs.trade.override");
 		final boolean canCollect = isOwner ? true : player.isAuthorized("essentials.signs.trade.override.collect");
-
+				
 		if (canBreak)
 		{
 			try
 			{
 				final Trade stored1 = getTrade(sign, 1, AmountType.TOTAL, false, ess);
 				final Trade stored2 = getTrade(sign, 2, AmountType.TOTAL, false, ess);
-
+				
 				if (!canCollect)
 				{
 					Trade.log("Sign", "Trade", "Destroy", signOwner, stored2, username, stored1, sign.getBlock().getLocation(), ess);
 					return true;
-				}
-
+				}				
+				
 				final Map<Integer, ItemStack> withdraw1 = stored1.pay(player, OverflowType.RETURN);
 				final Map<Integer, ItemStack> withdraw2 = stored2.pay(player, OverflowType.RETURN);
 
@@ -437,7 +435,6 @@ public class SignTrade extends EssentialsSign
 
 	public enum AmountType
 	{
-
 		TOTAL,
 		ROUNDED,
 		COST

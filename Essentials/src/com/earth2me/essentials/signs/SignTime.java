@@ -9,7 +9,6 @@ import net.ess3.api.IEssentials;
 
 public class SignTime extends EssentialsSign
 {
-
 	public SignTime()
 	{
 		super("Time");

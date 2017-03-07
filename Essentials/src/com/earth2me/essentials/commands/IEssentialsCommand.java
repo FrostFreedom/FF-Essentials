@@ -10,7 +10,6 @@ import org.bukkit.command.Command;
 
 public interface IEssentialsCommand
 {
-
 	String getName();
 
 	void run(Server server, User user, String commandLabel, Command cmd, String[] args)
